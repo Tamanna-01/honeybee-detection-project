@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honeybee Counter</title>
+    <style>
+        /* General Body Styling */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(135deg, #ffefba, #ffffff);
+        }
+
+        .container {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 20px;
+            z-index: 1;
+        }
+
+        /* Card Styling */
+        .card {
+            background: linear-gradient(145deg, #ffffff, #e6e6e6);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #4d2600;
+            font-size: 2.4em;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 1em;
+            margin-bottom: 10px;
+            display: inline-block;
+            color: #4d2600;
+        }
+
+        input[type="file"] {
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
+
+        button {
+            background-color: #ffbf00;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #e6a600;
+            transform: scale(1.05);
+        }
+
+        /* Result Card */
+        .result-card {
+            background: linear-gradient(145deg, #ffffff, #e6e6e6);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .result-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .result-card h2 {
+            color: #4d2600;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .result-card img {
+            margin-top: 10px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .result-card img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>🐝 Honeybee Counter</h1>
+            <form action="/" method="POST" enctype="multipart/form-data">
+                <label for="image">Upload an image of honeybees:</label><br>
+                <input type="file" name="image" id="image" accept="image/*" required>
+                <br><br>
+                <button type="submit">Count Honeybees</button>
+            </form>
+        </div>
+        
+        {% if bee_count is not none %}
+        <div class="result-card">
+            <h2>Detected Honeybees: {{ bee_count }}</h2>
+            <img src="{{ result_image }}" alt="Annotated Image">
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>
