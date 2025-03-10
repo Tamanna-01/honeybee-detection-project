@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Count Honeybees</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+</head>
+<body>
+
+    <div class="body-background"></div>
+
+
+    
+    <!-- Main Content -->
+    <div class="body-whole">
+         <!-- Navigation Bar -->
+         <div class="nav-bar">
+             <nav>
+                 <a href="{{ url_for('home') }}">Home Page</a>
+                 <a href="{{ url_for('count') }}" class="active">Count Honeybees</a>
+             </nav>
+         </div>
+        
+         <div class="body-contents">
+             <h1 class="page-title">Count Honeybees</h1>
+             <p class="page-description">Upload an image, and our model will count the honeybees accurately for you.</p>
+             
+             <!-- Upload Form -->
+             <div class="upload-section">
+                 <form method="POST" enctype="multipart/form-data">
+                     <input type="file" name="file" class="file-input" required>
+                     <button type="submit" class="upload-btn">
+                         Upload
+                         <!-- Star SVGs -->
+                         <div class="star-1">
+                             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 784.11 815.53">
+                                 <path class="fil0" d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path>
+                                </svg>
+                    </div>
+                    <div class="star-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 784.11 815.53">
+                            <path class="fil0" d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path>
+                        </svg>
+                    </div>
+                    <div class="star-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 784.11 815.53">
+                            <path class="fil0" d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path>
+                        </svg>
+                    </div>
+                    <div class="star-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 784.11 815.53">
+                            <path class="fil0" d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path>
+                        </svg>
+                    </div>
+                    <div class="star-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 784.11 815.53">
+                            <path class="fil0" d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path>
+                        </svg>
+                    </div>
+                    <div class="star-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 784.11 815.53">
+                            <path class="fil0" d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path>
+                        </svg>
+                    </div>
+                </button>
+            </form>
+        </div>
+
+        
+        <!-- Results Section -->
+        {% if bee_count is not none %}
+        <div class="results-section">
+            <h2>Number of Honeybees Detected: <span class="bee-count">{{ bee_count }}</span></h2>
+            <div class="image-preview">
+                <img src="{{ image_path }}" alt="Annotated Image" class="result-image">
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+</body>
+</html>

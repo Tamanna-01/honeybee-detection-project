@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    <title>Home</title>
+</head>
+<body>
+    <div class="body-background"></div>
+
+    <!-- full body -->
+    <div class="body-contents">
+
+        <!-- Nav bar -->
+        <div class="nav-bar">
+            <nav>
+                <a href="/home.html">Home Page</a>
+                <a href="/count.html">Count Honeybees</a>
+            </nav>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero-section">
+
+            <!--Hero Section Video -->
+            <div class="hero-vid">
+                <video class="background-video" autoplay muted loop>
+                    <source src="{{ url_for('static', filename='hero-sec-vid.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>                
+            </div>
+
+            <!-- Hero Section Contents -->
+            <div class="hero-contents">
+                <h1>Counting the number of 
+                    <br>honeybees <br>in a given image 
+                    <br>for object detection</h1>
+                <div class="hero-button">
+                    <a href="./count.html">
+                        <button>
+                        Try the model..
+                        <div class="star-1">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xml:space="preserve"
+                            version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            >
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path
+                                class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                                ></path>
+                            </g>
+                            </svg>
+                        </div>
+                        <div class="star-2">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xml:space="preserve"
+                            version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            >
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path
+                                class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                                ></path>
+                            </g>
+                            </svg>
+                        </div>
+                        <div class="star-3">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xml:space="preserve"
+                            version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            >
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path
+                                class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                                ></path>
+                            </g>
+                            </svg>
+                        </div>
+                        <div class="star-4">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xml:space="preserve"
+                            version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            >
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path
+                                class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                                ></path>
+                            </g>
+                            </svg>
+                        </div>
+                        <div class="star-5">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xml:space="preserve"
+                            version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            >
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path
+                                class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                                ></path>
+                            </g>
+                            </svg>
+                        </div>
+                        <div class="star-6">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xml:space="preserve"
+                            version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            >
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path
+                                class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                                ></path>
+                            </g>
+                            </svg>
+                        </div>
+                        </button>
+
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Introduction -->
+        <div class="introduction">
+            <h2 style="text-align: center; font-size: 2rem; color: #fec195;">Introduction</h2>
+
+        <!-- Text + Img -->
+            <div class="intro-1">
+
+            <!-- Introduction Text -->
+            <div class="text-card intro">
+                <p>
+                    Honeybees play a critical role in pollination, supporting biodiversity and agricultural productivity worldwide. Monitoring their population is essential for ecological research and sustainable agriculture. However, traditional methods of counting honeybees are labor-intensive and prone to errors.Our project leverages advanced deep learning techniques to automate honeybee detection and counting from images. Using models like YOLO, we have developed a robust system capable of detecting honeybees with high speed and accuracy. The web application allows users to upload images and instantly get the count of honeybees detected, along with annotated visuals.This innovative solution offers a scalable, efficient, and user-friendly way to monitor honeybee populations, contributing to ecological research and agricultural optimization efforts.
+                </p>
+            </div>
+
+            <!-- Introduction Image -->
+            <div class="intro-vid">
+                <!-- <img src="../resources/intro-img.jpg" alt="intro-img"> -->
+                <img src="{{ url_for('static', filename='intro-vid.gif') }}" alt="intro-gif">
+            </div>
+
+        </div>
+
+        <!-- Text + Text -->
+        <div class="intro-2">
+            
+            <!-- Problems -->
+            <div class="text-card problems">
+                <p>
+                    <h3>Problem Statement:</h3>
+                    Monitoring honeybee populations is essential for ecological balance and agricultural sustainability. Traditional methods of counting honeybees are manual, time-consuming, and prone to errors, making it difficult to track population dynamics accurately.The lack of automated, scalable solutions for honeybee detection hinders efforts in ecological research, pollination management, and agricultural productivity. There is a pressing need for a reliable system that can accurately detect and count honeybees in diverse environments, minimizing human effort and improving monitoring efficiency.Our project addresses this challenge by leveraging deep learning models to develop an automated honeybee detection and counting system. Through this, we aim to provide a scalable and accurate solution for researchers, farmers, and ecologists.
+                </p>
+            </div>
+            
+            <!-- Goals -->
+            <div class="text-card goals">
+                <p>
+                    <h3>Solution/Goals:</h3>
+                    Our project aims to solve the challenges of manual honeybee monitoring by developing an automated system using deep learning.
+                    <ul>
+                        <li>Automate Detection: Use advanced object detection models to identify and count honeybees in images.</li>
+                        <li>Compare Models: Evaluate YOLO and Faster R-CNN for accuracy and speed, selecting YOLO for deployment.</li>
+                        <li>User-Friendly Access: Create a web application to upload images and display honeybee counts with bounding box annotations.</li>
+                        <li>Support Research: Provide a scalable solution to aid ecological monitoring and agricultural productivity.</li>
+                        <li>Future Adaptability: Design the system for scalability, with potential extensions to video analysis and multi-species monitoring.</li>
+                    </ul>
+                </p>
+            </div>
+            
+        </div>
+
+        </div>
+
+        <!-- Comparision -->
+        <div class="comparision">
+            <h2 style="text-align: center; font-size: 2rem; color: #fec195;">Comparison</h2>
+        
+            <!-- Text and Image Side by Side -->
+            <div class="comparison-content">
+                <div class="text-card">
+                    <p>
+                        To identify the best model for honeybee detection, we trained and evaluated YOLOv8, YOLOv11, and Faster R-CNN on a custom dataset.
+                    </p>
+                    <ul>
+                        <li><strong>YOLOv8:</strong> Achieved the highest accuracy of 87.08%, offering the best balance of speed and precision.</li>
+                        <li><strong>YOLOv11:</strong> Delivered moderate performance with an accuracy of 63.02%, but fell short compared to YOLOv8.</li>
+                        <li><strong>Faster R-CNN:</strong> Demonstrated the lowest accuracy of 51.9%, primarily due to slower inference speed and challenges in detecting small objects like honeybees.</li>
+                    </ul>
+                </div>
+        
+                <div class="comparision-img">
+                    <img src="../static/comparison.png" alt="comparison-img">
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Team -->
+        <div class="team">
+            <h2 style="text-align: center; font-size: 2rem; color: #fec195;">Team</h2>
+
+            <!-- All profile cards -->
+            <div class="profile-cards">
+
+                <!-- Single profile card -->
+                <div class="profile-card">
+                    <div class="card">
+                      <div class="image tamanna"></div>
+                      <div class="card-info">
+                        <span>Tamanna Shaw</span>
+                        <p>GITAM University, CSE</p>
+                      </div>
+                      <a href="https://www.linkedin.com/in/tamannashaw/" class="button">Details</a>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="card">
+                      <div class="image ayusha"></div>
+                      <div class="card-info">
+                        <span>Ayusha Rani Rowlo</span>
+                        <p>GITAM University, CSE</p>
+                      </div>
+                      <a href="https://www.linkedin.com/in/ayusha-rani-rowlo/" class="button">Details</a>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="card">
+                      <div class="image surya"></div>
+                      <div class="card-info">
+                        <span>Surya Teja Pallapu</span>
+                        <p>GITAM University, CSE</p>
+                      </div>
+                      <a href="https://www.linkedin.com/in/surya-teja-pallapu/" class="button">Details</a>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="card">
+                      <div class="image poorvika"></div>
+                      <div class="card-info">
+                        <span>Poorvika Marali</span>
+                        <p>GITAM University, CSE</p>
+                      </div>
+                      <a href="https://www.linkedin.com/in/poorvika-marali/" class="button">Details</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
